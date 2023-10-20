@@ -1,23 +1,14 @@
 #include <stdio.h>
 
-int areCongruent(int a, int b, int n) {
-    // Vérifie si a et b sont congruents modulo n
-    if ((a - b) % n == 0) {
-        return 1; // a et b sont congruents modulo n
-    } else {
-        return 0; // a et b ne sont pas congruents modulo n
-    }
-}
-
 int main() {
     int a, b, n;
     printf("Entrez trois entiers (a, b, n) : ");
     scanf("%d %d %d", &a, &b, &n);
 
-    if (areCongruent(a, b, n)) {
-        printf("%d et %d sont congruents modulo %d\n", a, b, n);
+    if (a % n == b % n) {
+        printf("%d ≡ %d (mod %d) est vrai.\n", a, b, n);
     } else {
-        printf("%d et %d ne sont pas congruents modulo %d\n", a, b, n);
+        printf("%d ≡ %d (mod %d) est faux.\n", a, b, n);
     }
 
     return 0;
